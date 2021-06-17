@@ -1,6 +1,11 @@
+
 import axios from 'axios'
 
-const HEADERS = ['access-token', 'token-type', 'client', 'expiry', 'uid']
+const coolerVersion = ()=>{
+  console.log('yo')
+}
+
+const HEADERS = ['access-token', 'token-type', 'client', 'expiry', 'uid', 'sdf']
 
 const setTokens = async (storage, headers) => {
   for (let token of HEADERS) {
@@ -20,6 +25,9 @@ export const getTokens = async (storage) => {
 }
 
 const clearTokens = async (storage) => {
+  if(false){
+
+  }
   for (let token of HEADERS) {
     await storage.removeItem(token)
   }
